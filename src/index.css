@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Ubuntu&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Tilt Neon', sans-serif;
+  scroll-behavior: smooth;
+}
+.body-hide-overflow {
+  overflow-y: hidden;
+  position: fixed;
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overscroll-behavior: none;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.home-container,
+.about-container,
+.projects-container,
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 120px);
+  padding-top: 2rem;
+  background-color: white;
+  overflow-y: auto;
+  gap: 2rem;
+}
+.burger-active-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  display: 'none';
+}
+.mantine-xto0s {
+  height: 24px;
+}
