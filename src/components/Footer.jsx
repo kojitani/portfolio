@@ -36,7 +36,7 @@ export default function Footer() {
       style={{
         boxShadow: '0 0 10px rgba(0,0,0,.09)',
         position: 'relative',
-        zIndex: '2',
+        zIndex: '1',
       }}
     >
       <div className={`${classes.footer} container`}>

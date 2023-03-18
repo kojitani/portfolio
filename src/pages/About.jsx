@@ -1,8 +1,13 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 export default function About() {
   return (
-    <div className="about-container container">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}
+      className="about-container container"
+    >
       <h1>
         Hi there! My name is [Your Name] and I'm a self-taught front-end
         developer. I've been coding for [number of years] and I'm passionate
@@ -24,6 +29,6 @@ export default function About() {
         portfolio. If you're interested in working together, feel free to
         [include a call to action, such as "contact me" or "view my work"].
       </h1>
-    </div>
+    </motion.div>
   );
 }

@@ -18,7 +18,7 @@ const HEADER_HEIGHT = rem(60);
 const useStyles = createStyles(theme => ({
   root: {
     position: 'relative',
-    zIndex: 1,
+    zIndex: 3,
     boxShadow: '0 0 10px rgba(0,0,0,.09)',
   },
 
@@ -33,7 +33,7 @@ const useStyles = createStyles(theme => ({
     borderTopWidth: 0,
     overflow: 'hidden',
 
-    [theme.fn.largerThan('sm')]: {
+    [theme.fn.largerThan('900')]: {
       display: 'none',
     },
   },
@@ -46,13 +46,13 @@ const useStyles = createStyles(theme => ({
   },
 
   links: {
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan('900')]: {
       display: 'none',
     },
   },
 
   burger: {
-    [theme.fn.largerThan('sm')]: {
+    [theme.fn.largerThan('900')]: {
       display: 'none',
     },
   },
@@ -146,7 +146,10 @@ export default function HeaderNav() {
         <Container fluid className={`${classes.header} container`}>
           <Link
             to="/"
-            onClick={() => setActive(null)}
+            onClick={() => {
+              setActive(null);
+              close();
+            }}
             style={{
               display: 'flex',
               alignItems: 'center',

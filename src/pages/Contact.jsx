@@ -12,6 +12,7 @@ import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import { useState } from 'react';
 import { notifications } from '@mantine/notifications';
 import { IconCheck } from '@tabler/icons-react';
+import { motion } from 'framer-motion';
 const social = [
   { icon: IconBrandGithub, text: 'You can find my code on Github' },
   { icon: IconBrandLinkedin, text: 'View my LinkedIn profile' },
@@ -63,7 +64,9 @@ export default function Contact() {
       body: new URLSearchParams(formData).toString(),
     })
       .then(() => {
-        form.reset();
+        form.setFieldValue('message', '');
+        form.setFieldValue('subject', '');
+        // form.reset();
         setSentForm(true);
         setTimeout(() => {
           setSentForm(false);
@@ -79,7 +82,12 @@ export default function Contact() {
       .catch(error => alert(error));
   }
   return (
-    <div className="contact-container container">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}
+      className="contact-container container"
+    >
       <div className="form-container">
         <h1>Contact me</h1>
         <div className="form-seperator-container">
@@ -107,6 +115,7 @@ export default function Contact() {
                   placeholder="Your name"
                   name="name"
                   variant="filled"
+                  size="md"
                   {...form.getInputProps('name')}
                 />
                 <TextInput
@@ -114,6 +123,7 @@ export default function Contact() {
                   placeholder="Your email"
                   name="email"
                   variant="filled"
+                  size="md"
                   {...form.getInputProps('email')}
                 />
               </SimpleGrid>
@@ -124,6 +134,7 @@ export default function Contact() {
                 mt="md"
                 name="subject"
                 variant="filled"
+                size="md"
                 {...form.getInputProps('subject')}
               />
               <Textarea
@@ -135,6 +146,7 @@ export default function Contact() {
                 autosize
                 name="message"
                 variant="filled"
+                size="md"
                 {...form.getInputProps('message')}
               />
 
@@ -152,6 +164,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

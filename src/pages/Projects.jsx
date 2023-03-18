@@ -2,11 +2,10 @@ import {
   createStyles,
   Text,
   Title,
-  TextInput,
   Button,
-  Image,
   rem,
   Badge,
+  Skeleton,
 } from '@mantine/core';
 import {
   IconBrandCss3,
@@ -18,6 +17,7 @@ import {
 } from '@tabler/icons-react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import { motion } from 'framer-motion';
 
 const useStyles = createStyles(theme => ({
   wrapper: {
@@ -31,7 +31,7 @@ const useStyles = createStyles(theme => ({
       theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]
     }`,
 
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan('900')]: {
       flexDirection: 'column-reverse',
       padding: theme.spacing.xl,
     },
@@ -40,14 +40,14 @@ const useStyles = createStyles(theme => ({
   image: {
     maxWidth: '50%',
     overflow: 'hidden',
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan('900')]: {
       maxWidth: '100%',
     },
   },
 
   body: {
     width: '50%',
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan('900')]: {
       paddingRight: 0,
       marginTop: theme.spacing.xl,
       width: '100%',
@@ -158,7 +158,12 @@ export default function Projects() {
     );
   });
   return (
-    <div className="projects-container">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}
+      className="projects-container"
+    >
       <div
         className="container "
         style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}
@@ -167,6 +172,6 @@ export default function Projects() {
 
         {projectElements}
       </div>
-    </div>
+    </motion.div>
   );
 }
