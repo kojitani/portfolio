@@ -16,6 +16,8 @@
     "@tabler/icons-react": "^2.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-inner-image-zoom": "^3.0.2",
+    "react-medium-image-zoom": "^5.1.3",
     "react-router-dom": "^6.9.0"
   },
   "devDependencies": {

@@ -16,8 +16,8 @@ import {
   IconBrandReact,
   IconExternalLink,
 } from '@tabler/icons-react';
-import { Link } from 'react-router-dom';
-import image from '/images/vanventure.jpg';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const useStyles = createStyles(theme => ({
   wrapper: {
@@ -39,7 +39,7 @@ const useStyles = createStyles(theme => ({
 
   image: {
     maxWidth: '40%',
-
+    overflow: 'hidden',
     [theme.fn.smallerThan('sm')]: {
       maxWidth: '100%',
     },
@@ -146,12 +146,14 @@ export default function Projects() {
             </Button>
           </div>
         </div>
-        <Image
-          src={`/images/${project.title}.jpg`}
-          alt={`${project.title} image`}
-          className={`${classes.image} project-image`}
-          radius="lg"
-        />
+        <div className={classes.image}>
+          <Zoom style={{ width: '40%' }}>
+            <img
+              style={{ width: '100%', objectFit: 'cover', height: 'auto' }}
+              src={`/images/${project.title}.jpg`}
+            ></img>
+          </Zoom>
+        </div>
       </div>
     );
   });
@@ -162,6 +164,7 @@ export default function Projects() {
         style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}
       >
         <h1>Projects</h1>
+
         {projectElements}
       </div>
     </div>
