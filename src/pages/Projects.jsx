@@ -78,7 +78,7 @@ export default function Projects() {
   const projectData = [
     {
       title: 'VanVenture',
-      body: 'VanVenture is a camper van rental website, which allows users to both rent an camper van or rent out their unused RV to earn passive income. This website also has a dedicated dashboard that allows hosts to login and monitor their van listings.',
+      body: 'VanVenture is a camper van rental website, which allows users to  rent a camper van or rent out their unused RV to earn passive income. This website also has a dedicated dashboard that allows hosts to login and monitor their van listings.',
       source: 'https://github.com/kojitani/vanventure',
       demo: 'https://vanventure.netlify.app',
     },

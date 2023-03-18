@@ -47,12 +47,23 @@ export default function Contact() {
       subject: value => value.trim().length === 0,
     },
   });
+  function handleSubmit() {
+    event.preventDefault();
 
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    }).catch(error => alert(error));
+  }
   return (
     <div className="contact-container container">
       <div className="form-container">
         <h1>Contact me</h1>
-        <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem' }}>
+        <div className="form-seperator-container">
           <div className="contact-side-container">
             <Text fz="lg" fw={600}>
               If you have a question or just want to say hi, I’ll get back to
@@ -63,7 +74,12 @@ export default function Contact() {
             {icons}
           </div>
           <div className="contact-main-container">
-            <form name="contact" onSubmit={form.onSubmit(() => {})}>
+            <form
+              name="contact"
+              onSubmit={form.onSubmit(event => {
+                handleSubmit(event);
+              })}
+            >
               <input type="hidden" name="form-name" value="contact" />
 
               <SimpleGrid cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>

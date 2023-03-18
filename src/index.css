@@ -49,6 +49,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+.form-seperator-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
 .contact-side-container {
   width: 50%;
   display: flex;
@@ -73,7 +79,7 @@ body {
   .container {
     margin: 0;
   }
-  .form-container {
+  .form-seperator-container {
     flex-direction: column;
   }
   .contact-side-container,
