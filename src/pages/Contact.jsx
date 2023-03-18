@@ -1,27 +1,9 @@
 import React, { useEffect } from 'react';
 
 export default function Contact() {
-  const handleSubmit = event => {
-    event.preventDefault();
-
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => console.log('Form successfully submitted'))
-      .catch(error => alert(error));
-  };
-
-  useEffect(() => {
-    document.querySelector('form').addEventListener('submit', handleSubmit);
-  }, []);
   return (
     <div className="contact-container container">
-      <form name="contact" netlify>
+      <form name="contact" method="POST" data-netlify="true">
         <p>
           <label>
             Your Name: <input type="text" name="name" />
