@@ -6,7 +6,8 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from 'react-router-dom';
-
+import { MantineProvider } from '@mantine/core';
+import { Notifications } from '@mantine/notifications';
 import './index.css';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -29,6 +30,9 @@ function App() {
 }
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <MantineProvider withNormalizeCSS withGlobalStyles>
+      <Notifications position="top-center" />
+      <App />
+    </MantineProvider>
   </React.StrictMode>
 );

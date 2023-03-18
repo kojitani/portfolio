@@ -9,12 +9,16 @@ import {
 import { useForm } from '@mantine/form';
 import { Link } from 'react-router-dom';
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
-
+import { useState } from 'react';
+import { notifications } from '@mantine/notifications';
+import { IconCheck } from '@tabler/icons-react';
 const social = [
   { icon: IconBrandGithub, text: 'You can find my code on Github' },
   { icon: IconBrandLinkedin, text: 'View my LinkedIn profile' },
 ];
 export default function Contact() {
+  const [sentForm, setSentForm] = useState(false);
+
   const icons = social.map((Item, index) => (
     <div
       key={index}
@@ -57,7 +61,22 @@ export default function Contact() {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString(),
-    }).catch(error => alert(error));
+    })
+      .then(() => {
+        form.reset();
+        setSentForm(true);
+        setTimeout(() => {
+          setSentForm(false);
+          notifications.show({
+            title: 'Email sent',
+            message: 'Thank you, I will respond as soon as possible.',
+            autoClose: 5000,
+            color: 'teal',
+            icon: <IconCheck size="1rem" />,
+          });
+        }, 500);
+      })
+      .catch(error => alert(error));
   }
   return (
     <div className="contact-container container">
@@ -120,7 +139,12 @@ export default function Contact() {
               />
 
               <Group position="right" mt="xl">
-                <Button variant="light" type="submit" size="md">
+                <Button
+                  loading={sentForm}
+                  variant="light"
+                  type="submit"
+                  size="md"
+                >
                   Send message
                 </Button>
               </Group>
