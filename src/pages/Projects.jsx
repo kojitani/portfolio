@@ -38,7 +38,7 @@ const useStyles = createStyles(theme => ({
   },
 
   image: {
-    maxWidth: '40%',
+    maxWidth: '50%',
     overflow: 'hidden',
     [theme.fn.smallerThan('sm')]: {
       maxWidth: '100%',
@@ -46,8 +46,7 @@ const useStyles = createStyles(theme => ({
   },
 
   body: {
-    paddingRight: `calc(${theme.spacing.xl} * 4)`,
-    width: '60%',
+    width: '50%',
     [theme.fn.smallerThan('sm')]: {
       paddingRight: 0,
       marginTop: theme.spacing.xl,
@@ -147,7 +146,7 @@ export default function Projects() {
           </div>
         </div>
         <div className={classes.image}>
-          <Zoom style={{ width: '40%' }}>
+          <Zoom>
             <img
               style={{ width: '100%', objectFit: 'cover', height: 'auto' }}
               src={`/images/${project.title}.jpg`}
