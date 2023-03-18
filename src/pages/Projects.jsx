@@ -1,12 +1,4 @@
-import {
-  createStyles,
-  Text,
-  Title,
-  Button,
-  rem,
-  Badge,
-  Skeleton,
-} from '@mantine/core';
+import { createStyles, Text, Title, Button, rem, Badge } from '@mantine/core';
 import {
   IconBrandCss3,
   IconBrandGithub,

@@ -77,9 +77,9 @@ const useStyles = createStyles(theme => ({
           : theme.colors.gray[0],
     },
 
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan('900')]: {
       borderRadius: 0,
-      padding: theme.spacing.lg,
+      padding: '1.5rem 2rem',
     },
   },
 
@@ -128,7 +128,9 @@ export default function HeaderNav() {
         close();
       }}
     >
-      {link.label}
+      <Text inherit fz="lg">
+        {link.label}
+      </Text>
     </Link>
   ));
 

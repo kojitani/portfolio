@@ -8,34 +8,80 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { Link } from 'react-router-dom';
-import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
+import {
+  IconBrandGit,
+  IconBrandGithub,
+  IconBrandLinkedin,
+} from '@tabler/icons-react';
 import { useState } from 'react';
 import { notifications } from '@mantine/notifications';
 import { IconCheck } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
-const social = [
-  { icon: IconBrandGithub, text: 'You can find my code on Github' },
-  { icon: IconBrandLinkedin, text: 'View my LinkedIn profile' },
-];
+const social = [IconBrandGithub, IconBrandLinkedin];
 export default function Contact() {
   const [sentForm, setSentForm] = useState(false);
 
-  const icons = social.map((Item, index) => (
+  const icons = social.map((Icon, index) => (
     <div
       key={index}
-      style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.5rem',
+        marginBottom: '-0.5rem',
+      }}
     >
-      <Item.icon size="1.5rem" stroke={1.5} />
+      <Icon size="1.5rem" stroke={1.5} />
       <Link
         to={
-          Item.icon === IconBrandGithub
+          Icon === IconBrandGithub
             ? 'https://github.com/kojitani'
             : 'https://www.linkedin.com/in/koji-taniguchi96/'
         }
         target="_blank"
         className="contact-link"
       >
-        {Item.text}
+        {Icon === IconBrandGithub && (
+          <Text
+            color="black"
+            sx={{ fontFamily: 'Tilt Neon, sans-serif' }}
+            fz="lg"
+          >
+            You can find me on{' '}
+            <Text
+              span
+              variant="gradient"
+              gradient={{ from: 'dark.3', to: 'dark.9', deg: 45 }}
+              ta="center"
+              fz="xl"
+              fw={700}
+              inherit
+            >
+              GitHub.
+            </Text>
+          </Text>
+        )}
+        {Icon === IconBrandLinkedin && (
+          <Text
+            color="black"
+            sx={{ fontFamily: 'Tilt Neon, sans-serif' }}
+            fz="lg"
+          >
+            View my{' '}
+            <Text
+              variant="gradient"
+              gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
+              ta="center"
+              fz="xl"
+              fw={700}
+              span
+              inherit
+            >
+              LinkedIn{' '}
+            </Text>
+            profile.
+          </Text>
+        )}
       </Link>
     </div>
   ));
@@ -92,7 +138,7 @@ export default function Contact() {
         <h1>Contact me</h1>
         <div className="form-seperator-container">
           <div className="contact-side-container">
-            <Text fz="lg" fw={600}>
+            <Text inherit fz="xl" color="dark.4" fw={600}>
               If you have a question or just want to say hi, I’ll get back to
               you as soon as I can! You can find me on social media, or please
               fill in the form to contact me.
@@ -115,7 +161,7 @@ export default function Contact() {
                   placeholder="Your name"
                   name="name"
                   variant="filled"
-                  size="md"
+                  size="lg"
                   {...form.getInputProps('name')}
                 />
                 <TextInput
@@ -123,7 +169,7 @@ export default function Contact() {
                   placeholder="Your email"
                   name="email"
                   variant="filled"
-                  size="md"
+                  size="lg"
                   {...form.getInputProps('email')}
                 />
               </SimpleGrid>
@@ -134,7 +180,7 @@ export default function Contact() {
                 mt="md"
                 name="subject"
                 variant="filled"
-                size="md"
+                size="lg"
                 {...form.getInputProps('subject')}
               />
               <Textarea
@@ -146,7 +192,7 @@ export default function Contact() {
                 autosize
                 name="message"
                 variant="filled"
-                size="md"
+                size="lg"
                 {...form.getInputProps('message')}
               />
 

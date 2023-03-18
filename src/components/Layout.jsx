@@ -12,6 +12,7 @@ export default function Layout() {
       <AnimatePresence>
         <Outlet location={location} ley={location.pathname} />
       </AnimatePresence>
+
       <Footer />
     </div>
   );

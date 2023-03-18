@@ -41,7 +41,7 @@ export default function Footer() {
     >
       <div className={`${classes.footer} container`}>
         <Container fluid className={classes.inner}>
-          <Text sx={{ fontFamily: 'Tilt Neon, sans-serif' }} fz="md">
+          <Text inherit color="dark.3" fz="sm">
             Copyright © 2023 Koji Taniguchi
           </Text>
 
