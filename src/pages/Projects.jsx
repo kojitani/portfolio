@@ -67,6 +67,11 @@ const useStyles = createStyles(theme => ({
     gap: '1rem',
     marginTop: theme.spacing.xl,
   },
+  buttons: {
+    [theme.fn.smallerThan('450')]: {
+      flexDirection: 'column-reverse',
+    },
+  },
 }));
 
 export default function Projects() {
@@ -119,7 +124,7 @@ export default function Projects() {
               </Badge>
             )}
           </div>
-          <div className={classes.controls}>
+          <div className={`${classes.controls} ${classes.buttons}`}>
             <Button
               component="a"
               href={project.source}
@@ -144,11 +149,21 @@ export default function Projects() {
         <Image
           src={`/images/${project.title}.jpg`}
           alt={`${project.title} image`}
-          className={classes.image}
+          className={`${classes.image} project-image`}
           radius="lg"
         />
       </div>
     );
   });
-  return <div className="projects-container container">{projectElements}</div>;
+  return (
+    <div className="projects-container">
+      <div
+        className="container "
+        style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}
+      >
+        <h1>Projects</h1>
+        {projectElements}
+      </div>
+    </div>
+  );
 }

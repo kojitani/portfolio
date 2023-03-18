@@ -7,6 +7,9 @@
   font-family: 'Tilt Neon', sans-serif;
   scroll-behavior: smooth;
 }
+body {
+  overflow: hidden;
+}
 .body-hide-overflow {
   overflow-y: hidden;
   position: fixed;
@@ -17,7 +20,7 @@
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 2rem;
 }
 .home-container,
 .about-container,
@@ -27,10 +30,8 @@
   flex-direction: column;
   width: 100%;
   height: calc(100vh - 120px);
-  padding-top: 2rem;
   background-color: white;
-  overflow-y: auto;
-  gap: 2rem;
+  overflow-y: overlay;
 }
 .burger-active-overlay {
   position: absolute;
@@ -46,4 +47,15 @@
 }
 .mantine-xto0s {
   height: 24px;
+}
+.project-image {
+  transition: all 0.5s ease;
+}
+.project-image:hover {
+  scale: 1.3;
+}
+@media screen and (max-width: 800px) {
+  .container {
+    margin: 0;
+  }
 }
