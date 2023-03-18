@@ -32,7 +32,7 @@ export default function Footer() {
   const { classes } = useStyles();
 
   return (
-    <div style={{ boxShadow: '0 0 10px rgba(0,0,0,.09)' }}>
+    <div style={{ boxShadow: '0 0 10px rgba(0,0,0,.09)', zIndex: '2' }}>
       <div className={`${classes.footer} container`}>
         <Container fluid className={classes.inner}>
           <Text sx={{ fontFamily: 'Tilt Neon, sans-serif' }} fz="md">
