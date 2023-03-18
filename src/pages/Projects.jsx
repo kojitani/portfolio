@@ -150,6 +150,7 @@ export default function Projects() {
             <img
               style={{ width: '100%', objectFit: 'cover', height: 'auto' }}
               src={`/images/${project.title}.jpg`}
+              alt={`${project.title} preview image`}
             ></img>
           </Zoom>
         </div>

@@ -30,6 +30,7 @@ body {
   flex-direction: column;
   width: 100%;
   height: calc(100vh - 120px);
+  min-height: -webkit-fill-available;
   background-color: white;
   overflow-y: overlay;
 }
