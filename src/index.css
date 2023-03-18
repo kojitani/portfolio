@@ -55,11 +55,11 @@ body {
     margin: 0;
   }
 }
-@supports (height: 100dvh) {
+@supports (height: 100svh) {
   .home-container,
   .about-container,
   .projects-container,
   .contact-container {
-    min-height: calc(100dvh - 120px);
+    min-height: calc(100svh - 120px);
   }
 }
