@@ -31,8 +31,8 @@ export default function About() {
             <Text inherit fz="xl">
               I'm Koji, a self-taught front-end developer based in Kyoto, Japan.
               I am passionate about creating functional and responsive websites
-              that are both aesthetically pleasing and easy to use. I have
-              experience with{' '}
+              that are both aesthetically pleasing and easy to use. I am most
+              experienced with{' '}
               <Text
                 span
                 variant="gradient"
