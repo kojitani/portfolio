@@ -14,10 +14,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
-
+import ErrorPage from './pages/ErrorPage';
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
       <Route index element={<Home />}></Route>
       <Route path="projects" element={<Projects />}></Route>
       <Route path="about" element={<About />}></Route>

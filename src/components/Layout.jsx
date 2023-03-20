@@ -11,12 +11,7 @@ export default function Layout() {
     '/wave-home.svg',
     '/wave-projects.svg',
   ];
-  useEffect(() => {
-    waveBackgrounds.forEach(background => {
-      const backgroundImg = new Image();
-      backgroundImg.src = background;
-    });
-  }, []);
+
   const backgroundElements = waveBackgrounds.map((background, i) => {
     return <img key={i} src={background} style={{ display: 'none' }}></img>;
   });

@@ -29,9 +29,10 @@ export default function About() {
             }}
           >
             <Text inherit fz="xl">
-              I'm Koji, a self-taught front-end developer. I am passionate about
-              creating beautiful and functional websites that are both
-              aesthetically pleasing and easy to use. I have experience with{' '}
+              I'm Koji, a self-taught front-end developer based in Kyoto, Japan.
+              I am passionate about creating beautiful and functional websites
+              that are both aesthetically pleasing and easy to use. I have
+              experience with{' '}
               <Text
                 span
                 variant="gradient"
@@ -99,8 +100,8 @@ export default function About() {
               van listings.
             </Text>
             <Text inherit fz="xl">
-              In my free time, I enjoy watching fantasy and horror genre TV
-              shows/movies and video games. I'm always looking for new
+              In my free time, I enjoy consuming fantasy and horror genre TV
+              shows/movies and playing video games. I'm always looking for new
               opportunities to learn and collaborate with other developers, so
               if you're interested in working together, feel free to{' '}
               <Text

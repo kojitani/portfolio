@@ -52,14 +52,7 @@ export default function Footer() {
   const { classes } = useStyles();
 
   return (
-    <div
-      style={{
-        // boxShadow: '0 0 10px rgba(0,0,0,.09)',
-        position: 'relative',
-        zIndex: '1',
-        backgroundColor: 'transparent',
-      }}
-    >
+    <div className="footer-bar">
       <div className={classes.footer}>
         <Container fluid className={classes.inner}>
           <Text inherit className={classes.text} fz="sm">

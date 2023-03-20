@@ -1,32 +1,84 @@
 import React from 'react';
-
+import { Title, Text, Button } from '@mantine/core';
 export default function Home() {
   return (
     <div className="home-container ">
       <div className="container">
-        <h4>Welcome, my name is</h4>
-        <h1>
-          Hi there! My name is [Your Name] and I'm a self-taught front-end
-          developer. I've been coding for [number of years] and I'm passionate
-          about creating beautiful and functional websites that provide great
-          user experiences. My journey into web development began [briefly
-          describe how you got started]. Since then, I've honed my skills by
-          working on a variety of projects and keeping up with the latest
-          technologies and trends in the field. I have experience with [list
-          some of the technologies and tools you're proficient with]. One of the
-          things I love about front-end development is the ability to bring
-          designs to life and create immersive digital experiences. I have an
-          eye for detail and a commitment to producing clean, organized, and
-          efficient code. I believe that the best websites are not only
-          aesthetically pleasing, but also easy to use and accessible to all
-          users. In my free time, I enjoy [briefly mention some of your hobbies
-          or interests]. I'm also always looking for new opportunities to learn
-          and grow as a developer, whether it's by tackling challenging projects
-          or collaborating with other talented professionals. Thank you for
-          taking the time to visit my portfolio. If you're interested in working
-          together, feel free to [include a call to action, such as "contact me"
-          or "view my work"].
+        <Title className="home-welcome" color="gray.9" order={4}>
+          Welcome, my name is
+        </Title>
+        <h1 id="home-title" data-text="Koji Taniguchi." className="home-name">
+          Koji Taniguchi.
         </h1>
+        <Title order={1} color="dark.3" className="home-intro">
+          I build things for the web.
+        </Title>
+        <Text
+          fz="lg"
+          color="dark.5"
+          inherit
+          style={{ maxWidth: '540px', margin: '2rem 0' }}
+        >
+          Self-taught developer, passionate about creating functional websites.
+          I have most experience with{' '}
+          <Text
+            span
+            variant="gradient"
+            gradient={{ from: 'yellow.4', to: 'yellow.7', deg: 45 }}
+            ta="center"
+            fz="xl"
+            fw={700}
+            inherit
+          >
+            JavaScript
+          </Text>
+          ,{' '}
+          <Text
+            span
+            variant="gradient"
+            gradient={{ from: 'blue.2', to: 'blue.5', deg: 45 }}
+            ta="center"
+            fz="xl"
+            fw={700}
+            inherit
+          >
+            React
+          </Text>
+          ,{' '}
+          <Text
+            span
+            variant="gradient"
+            gradient={{ from: 'orange.5', to: 'orange.9', deg: 45 }}
+            ta="center"
+            fz="xl"
+            fw={700}
+            inherit
+          >
+            HTML
+          </Text>
+          , and{' '}
+          <Text
+            span
+            variant="gradient"
+            gradient={{ from: 'blue.6', to: 'blue.9', deg: 45 }}
+            ta="center"
+            fz="xl"
+            fw={700}
+            inherit
+          >
+            CSS
+          </Text>
+          .
+        </Text>
+        <Button
+          component="a"
+          size="lg"
+          href="/about"
+          color="dark.9"
+          variant="outline"
+        >
+          More about me
+        </Button>
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ body {
   overflow-x: hidden;
   background-position: left 0 bottom 0;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100vw;
 }
 
 .burger-active-overlay {
@@ -105,7 +105,7 @@ body {
   right: 1rem;
   cursor: pointer;
 }
-
+#home-title,
 #about-title,
 #contact-title,
 #projects-title {
@@ -117,6 +117,7 @@ body {
   color: #fff;
   -webkit-text-stroke: 0 #fff;
 }
+#home-title::before,
 #about-title::before,
 #contact-title::before,
 #projects-title::before {
@@ -131,6 +132,28 @@ body {
   overflow: hidden;
   animation: animate 15s ease infinite;
 }
+.home-welcome {
+  width: 1440px;
+  font-family: 'Space Mono', sans-serif;
+  font-size: clamp(16px, 2vw, 24px);
+  margin-bottom: 1rem;
+}
+.home-intro {
+  font-family: 'Mukta', sans-serif;
+  font-size: clamp(40px, 8vw, 80px);
+  line-height: 100%;
+}
+#home-title {
+  font-family: 'Mukta', sans-serif;
+  font-size: clamp(40px, 8vw, 80px);
+  line-height: 110%;
+}
+.footer-bar {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
 @keyframes animate {
   0%,
   5%,
@@ -140,6 +163,14 @@ body {
   10%,
   90% {
     width: 100%;
+  }
+}
+@media screen and (min-width: 900px) and (max-height: 800px) {
+  .about-container,
+  .home-container,
+  .projects-container,
+  .contact-container {
+    background-image: none;
   }
 }
 @media screen and (max-width: 900px) {
@@ -159,6 +190,9 @@ body {
   .projects-container,
   .contact-container {
     background-image: none;
+  }
+  .footer-bar {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
   }
 }
 @media screen and (max-width: 450px) {

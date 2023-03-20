@@ -99,13 +99,14 @@ export default function HeaderNav() {
   const location = useLocation();
   const links = [
     {
-      link: 'projects',
-      label: 'Projects',
-    },
-    {
       link: 'about',
       label: 'About',
     },
+    {
+      link: 'projects',
+      label: 'Projects',
+    },
+
     {
       link: 'contact',
       label: 'Contact',
