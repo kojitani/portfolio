@@ -119,7 +119,6 @@ export default function HeaderNav() {
     <Link
       key={link.label}
       to={`/${link.link}`}
-      title={`${link.link} page`}
       className={cx(classes.link, {
         [classes.linkActive]: active === link.link,
       })}

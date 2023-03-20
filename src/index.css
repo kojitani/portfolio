@@ -144,15 +144,15 @@ body {
   color: #000000;
   -webkit-text-stroke: 0;
   overflow: hidden;
-  animation: animate 5s linear infinite;
+  animation: animate 15s ease infinite;
 }
 @keyframes animate {
   0%,
-  10%,
+  5%,
   100% {
     width: 0;
   }
-  70%,
+  10%,
   90% {
     width: 100%;
   }

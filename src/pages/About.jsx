@@ -32,7 +32,7 @@ export default function About() {
             marginTop: '2rem',
           }}
         >
-          <Text inherit fz="lg">
+          <Text inherit fz="xl">
             I'm Koji, a self-taught front-end developer. I am passionate about
             creating beautiful and functional websites that are both
             aesthetically pleasing and easy to use. I have experience with{' '}
@@ -85,7 +85,7 @@ export default function About() {
             </Text>{' '}
             and I am always looking to expand my skills and knowledge.
           </Text>
-          <Text inherit fz="lg">
+          <Text inherit fz="xl">
             Although I don't have a lot of professional experience yet, I have
             worked on a few projects that I'm proud of. One of my recent
             projects,{' '}
@@ -102,7 +102,7 @@ export default function About() {
             dedicated dashboard that allows hosts to login and monitor their van
             listings.
           </Text>
-          <Text inherit fz="lg">
+          <Text inherit fz="xl">
             In my free time, I enjoy watching fantasy and horror genre TV
             shows/movies and video games. I'm always looking for new
             opportunities to learn and collaborate with other developers, so if

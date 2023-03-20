@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+
 export default function Home() {
   return (
     <motion.div
@@ -9,8 +10,6 @@ export default function Home() {
       exit={{ opacity: 1 }}
     >
       <div className="container">
-        <h4>Welcome, my name is</h4>
-        <h1>Koji Taniguchi</h1>
         <h4>Welcome, my name is</h4>
         <h1>
           Hi there! My name is [Your Name] and I'm a self-taught front-end

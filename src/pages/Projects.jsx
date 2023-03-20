@@ -53,6 +53,7 @@ const useStyles = createStyles(theme => ({
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     lineHeight: 1,
     marginBottom: theme.spacing.md,
+    fontFamily: 'Mukta, san-serif',
   },
 
   controls: {
@@ -97,6 +98,7 @@ export default function Projects() {
         transition={{
           ease: [1, -0.09, 0.17, 1.1],
           duration: (i + 1) * 1,
+          delay: 1,
         }}
         exit={{ opacity: 1 }}
         className={classes.wrapper}
