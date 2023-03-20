@@ -11,6 +11,7 @@ import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 const useStyles = createStyles(theme => ({
   footer: {
     height: '60px',
+    backgroundColor: '#527ebd',
   },
 
   inner: {
@@ -38,14 +39,15 @@ export default function Footer() {
   return (
     <div
       style={{
-        boxShadow: '0 0 10px rgba(0,0,0,.09)',
+        // boxShadow: '0 0 10px rgba(0,0,0,.09)',
         position: 'relative',
         zIndex: '1',
+        backgroundColor: 'transparent',
       }}
     >
       <div className={classes.footer}>
         <Container fluid className={classes.inner}>
-          <Text inherit color="dark.3" fz="sm">
+          <Text inherit color="white" fz="sm">
             Copyright © 2023 Koji Taniguchi
           </Text>
 
@@ -57,7 +59,7 @@ export default function Footer() {
                 href="https://github.com/kojitani"
                 target="_blank"
               >
-                <IconBrandGithub size="1.5rem" stroke={2} />
+                <IconBrandGithub color="white" size="1.5rem" stroke={2} />
               </ActionIcon>
             </Tooltip>
             <Tooltip withArrow color="blue.9" label="Go to LinkedIn">
@@ -67,7 +69,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/koji-taniguchi96/"
                 target="_blank"
               >
-                <IconBrandLinkedin size="1.5rem" stroke={1.5} />
+                <IconBrandLinkedin color="white" size="1.5rem" stroke={1.5} />
               </ActionIcon>
             </Tooltip>
           </Group>

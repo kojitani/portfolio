@@ -124,12 +124,7 @@ export default function Contact() {
       .catch(error => alert(error));
   }
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 1 }}
-      className="contact-container "
-    >
+    <motion.div className="contact-container ">
       <div className="container">
         <div className="form-container">
           <h1 data-text="Contact me" id="contact-title">

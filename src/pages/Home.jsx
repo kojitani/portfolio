@@ -1,17 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <motion.div
-      className="home-container "
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 1 }}
-    >
+    <div className="home-container ">
       <div className="container">
         <h4>Welcome, my name is</h4>
-        <h1>
+        <h1 style={{ color: '#597fbf' }}>
           Hi there! My name is [Your Name] and I'm a self-taught front-end
           developer. I've been coding for [number of years] and I'm passionate
           about creating beautiful and functional websites that provide great
@@ -34,6 +28,6 @@ export default function Home() {
           or "view my work"].
         </h1>
       </div>
-    </motion.div>
+    </div>
   );
 }

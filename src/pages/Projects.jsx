@@ -170,12 +170,7 @@ export default function Projects() {
     );
   });
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 1 }}
-      className="projects-container"
-    >
+    <motion.div className="projects-container">
       <div
         className="container "
         style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}

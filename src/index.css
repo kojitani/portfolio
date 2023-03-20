@@ -21,6 +21,18 @@ body {
   margin: 0 auto;
   padding: 2rem;
 }
+.home-container {
+  background-image: url('/wave-home.svg');
+}
+.projects-container {
+  background-image: url('/wave-projects.svg');
+}
+.about-container {
+  background-image: url('/wave-about.svg');
+}
+.contact-container {
+  background-image: url('/wave-contact.svg');
+}
 .home-container,
 .about-container,
 .projects-container,
@@ -32,31 +44,11 @@ body {
   background-color: white;
   overflow-y: overlay;
   overflow-x: hidden;
-}
-.home-container {
-  background-image: url('/public/wave-home.svg');
   background-position: left 0 bottom 0;
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.projects-container {
-  background-image: url('/public/wave-projects.svg');
-  background-position: left 0 bottom 0;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-.about-container {
-  background-image: url('/public/wave-about.svg');
-  background-position: left 0 bottom 0;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-.contact-container {
-  background-image: url('/public/wave-contact.svg');
-  background-position: left 0 bottom 0;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+
 .burger-active-overlay {
   position: absolute;
   top: 0;
@@ -114,12 +106,12 @@ body {
   cursor: pointer;
 }
 
-.mantine-asm909:hover .tabler-icon-brand-github {
+/* .mantine-asm909:hover .tabler-icon-brand-github {
   color: black;
 }
 .mantine-asm909:hover .tabler-icon-brand-linkedin {
   color: #0077b5;
-}
+} */
 #about-title,
 #contact-title,
 #projects-title {
