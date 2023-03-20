@@ -4,6 +4,7 @@ import {
   Group,
   ActionIcon,
   Text,
+  Tooltip,
 } from '@mantine/core';
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 
@@ -49,24 +50,26 @@ export default function Footer() {
           </Text>
 
           <Group spacing={0} position="right" noWrap className={classes.links}>
-            <ActionIcon
-              size="lg"
-              component="a"
-              href="https://github.com/kojitani"
-              target="_blank"
-              title="Github link"
-            >
-              <IconBrandGithub size="1.5rem" stroke={2} />
-            </ActionIcon>
-            <ActionIcon
-              size="lg"
-              component="a"
-              href="https://www.linkedin.com/in/koji-taniguchi96/"
-              target="_blank"
-              title="Linkedin link"
-            >
-              <IconBrandLinkedin size="1.5rem" stroke={1.5} />
-            </ActionIcon>
+            <Tooltip withArrow color="dark.5" label="Go to Github">
+              <ActionIcon
+                size="lg"
+                component="a"
+                href="https://github.com/kojitani"
+                target="_blank"
+              >
+                <IconBrandGithub size="1.5rem" stroke={2} />
+              </ActionIcon>
+            </Tooltip>
+            <Tooltip withArrow color="blue.9" label="Go to LinkedIn">
+              <ActionIcon
+                size="lg"
+                component="a"
+                href="https://www.linkedin.com/in/koji-taniguchi96/"
+                target="_blank"
+              >
+                <IconBrandLinkedin size="1.5rem" stroke={1.5} />
+              </ActionIcon>
+            </Tooltip>
           </Group>
         </Container>
       </div>

@@ -27,7 +27,7 @@ export default function Contact() {
         marginBottom: '-0.5rem',
       }}
     >
-      <Icon size="1.5rem" stroke={1.5} />
+      <Icon size="2rem" stroke={1.5} />
       <Link
         to={
           Icon === IconBrandGithub
@@ -132,10 +132,12 @@ export default function Contact() {
     >
       <div className="container">
         <div className="form-container">
-          <h1>Contact me</h1>
+          <h1 data-text="Contact me" id="contact-title">
+            Contact me
+          </h1>
           <div className="form-seperator-container">
             <div className="contact-side-container">
-              <Text inherit fz="xl" color="dark.4" fw={600}>
+              <Text inherit fz="xl" color="dark.9">
                 If you have a question or just want to say hi, I’ll get back to
                 you as soon as I can! You can find me on social media, or please
                 fill in the form to contact me.

@@ -69,7 +69,7 @@ const useStyles = createStyles(theme => ({
         : theme.colors.gray[7],
     fontSize: theme.fontSizes.md,
     fontWeight: 500,
-
+    fontFamily: 'Space Mono, sans-serif',
     '&:hover': {
       backgroundColor:
         theme.colorScheme === 'dark'

@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Mukta&family=Open+Sans&family=Poppins&family=Space+Mono&family=Tilt+Neon&family=Ubuntu&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Tilt Neon', sans-serif;
+  font-family: 'Mukta', sans-serif;
   scroll-behavior: smooth;
 }
 body {
@@ -34,8 +33,26 @@ body {
   overflow-y: overlay;
   overflow-x: hidden;
 }
+.home-container {
+  background-image: url('/public/wave-home.svg');
+  background-position: left 0 bottom 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.projects-container {
+  background-image: url('/public/wave-projects.svg');
+  background-position: left 0 bottom 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.about-container {
+  background-image: url('/public/wave-about.svg');
+  background-position: left 0 bottom 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 .contact-container {
-  background-image: url('/public/wave.svg');
+  background-image: url('/public/wave-contact.svg');
   background-position: left 0 bottom 0;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -103,7 +120,43 @@ body {
 .mantine-asm909:hover .tabler-icon-brand-linkedin {
   color: #0077b5;
 }
-
+#about-title,
+#contact-title,
+#projects-title {
+  white-space: nowrap;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-right: auto;
+  position: relative;
+  color: #fff;
+  -webkit-text-stroke: 0.1px #c2c2c2;
+}
+#about-title::before,
+#contact-title::before,
+#projects-title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #000000;
+  -webkit-text-stroke: 0;
+  overflow: hidden;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 900px) {
   .container {
     margin: 0;
@@ -116,6 +169,9 @@ body {
     width: 100%;
   }
 
+  .about-container,
+  .home-container,
+  .projects-container,
   .contact-container {
     background-image: none;
   }
@@ -124,5 +180,10 @@ body {
   .project-img-zoom {
     top: 0.5rem;
     right: 0.5rem;
+  }
+  #about-title,
+  #contact-title,
+  #projects-title {
+    font-size: 1.9rem;
   }
 }

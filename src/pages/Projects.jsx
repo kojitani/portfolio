@@ -51,7 +51,6 @@ const useStyles = createStyles(theme => ({
 
   title: {
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    fontFamily: `Tilt Neon, ${theme.fontFamily}`,
     lineHeight: 1,
     marginBottom: theme.spacing.md,
   },
@@ -179,7 +178,9 @@ export default function Projects() {
         className="container "
         style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}
       >
-        <h1>Projects</h1>
+        <h1 id="projects-title" data-text="Projects">
+          Projects
+        </h1>
 
         {projectElements}
       </div>
