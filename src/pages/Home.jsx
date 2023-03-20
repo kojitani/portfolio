@@ -5,7 +5,7 @@ export default function Home() {
     <div className="home-container ">
       <div className="container">
         <h4>Welcome, my name is</h4>
-        <h1 style={{ color: '#597fbf' }}>
+        <h1>
           Hi there! My name is [Your Name] and I'm a self-taught front-end
           developer. I've been coding for [number of years] and I'm passionate
           about creating beautiful and functional websites that provide great

@@ -11,9 +11,14 @@ export default function Layout() {
     '/wave-home.svg',
     '/wave-projects.svg',
   ];
-  waveBackgrounds.forEach(background => {
-    const backgroundImg = new Image();
-    backgroundImg.src = background;
+  useEffect(() => {
+    waveBackgrounds.forEach(background => {
+      const backgroundImg = new Image();
+      backgroundImg.src = background;
+    });
+  }, []);
+  const backgroundElements = waveBackgrounds.map((background, i) => {
+    return <img key={i} src={background} style={{ display: 'none' }}></img>;
   });
   return (
     <div>
@@ -21,8 +26,8 @@ export default function Layout() {
       <AnimatePresence>
         <Outlet context={location} />
       </AnimatePresence>
-
       <Footer />
+      {backgroundElements}
     </div>
   );
 }
