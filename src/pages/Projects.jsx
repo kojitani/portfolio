@@ -110,21 +110,33 @@ export default function Projects() {
             {project.body}
           </Text>
           <div className={classes.controls}>
-            <Badge leftSection={<IconBrandHtml5 />} size="xl" color="orange">
+            <Badge
+              leftSection={<IconBrandHtml5 stroke={2.5} />}
+              size="xl"
+              color="orange"
+            >
               HTML
             </Badge>
-            <Badge leftSection={<IconBrandCss3 />} size="xl" color="blue">
+            <Badge
+              leftSection={<IconBrandCss3 stroke={2.5} />}
+              size="xl"
+              color="blue"
+            >
               CSS
             </Badge>
             <Badge
-              leftSection={<IconBrandJavascript />}
+              leftSection={<IconBrandJavascript stroke={2.5} />}
               size="xl"
               color="yellow"
             >
               JavaScript
             </Badge>
             {i === 0 && (
-              <Badge leftSection={<IconBrandReact />} size="xl" color="cyan">
+              <Badge
+                leftSection={<IconBrandReact stroke={2.5} />}
+                size="xl"
+                color="cyan"
+              >
                 React
               </Badge>
             )}

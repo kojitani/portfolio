@@ -91,9 +91,7 @@ body {
   text-decoration-thickness: 2px;
   color: black;
 }
-.mantine-xto0s {
-  height: 24px;
-}
+
 .background-img {
   position: absolute;
   left: 0;
@@ -154,7 +152,10 @@ body {
   z-index: 1;
   background-color: transparent;
 }
-
+/* tech badge icons */
+.mantine-xto0s {
+  height: 24px;
+}
 @keyframes animate {
   0%,
   5%,
@@ -172,6 +173,19 @@ body {
   .projects-container,
   .contact-container {
     background-image: none;
+  }
+  /* footer bar */
+  .mantine-1cmvm90 {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+  }
+  /* footer icons */
+  .mantine-8s78w {
+    color: black;
+  }
+  /* footer text */
+  .mantine-100v7nv {
+    color: black;
   }
 }
 @media screen and (max-width: 900px) {
