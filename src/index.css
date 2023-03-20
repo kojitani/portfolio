@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Mukta&family=Open+Sans&family=Poppins&family=Space+Mono&family=Tilt+Neon&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Mukta&family=Open+Sans&family=Oswald&family=Poppins&family=Sen&family=Space+Mono&family=Tilt+Neon&family=Ubuntu&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Mukta', sans-serif;
+  font-family: 'Sen', sans-serif;
   scroll-behavior: smooth;
 }
 body {
@@ -106,23 +106,16 @@ body {
   cursor: pointer;
 }
 
-/* .mantine-asm909:hover .tabler-icon-brand-github {
-  color: black;
-}
-.mantine-asm909:hover .tabler-icon-brand-linkedin {
-  color: #0077b5;
-} */
 #about-title,
 #contact-title,
 #projects-title {
   white-space: nowrap;
-  font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
   display: inline-block;
   margin-right: auto;
   position: relative;
   color: #fff;
-  -webkit-text-stroke: 0.1px #c2c2c2;
+  -webkit-text-stroke: 0 #fff;
 }
 #about-title::before,
 #contact-title::before,
@@ -134,7 +127,7 @@ body {
   width: 0;
   height: 100%;
   color: #000000;
-  -webkit-text-stroke: 0;
+  -webkit-text-stroke: 0 #fff;
   overflow: hidden;
   animation: animate 15s ease infinite;
 }

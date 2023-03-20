@@ -14,7 +14,6 @@ export default function Layout() {
   waveBackgrounds.forEach(background => {
     const backgroundImg = new Image();
     backgroundImg.src = background;
-    console.log(backgroundImg);
   });
   return (
     <div>

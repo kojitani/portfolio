@@ -53,7 +53,7 @@ const useStyles = createStyles(theme => ({
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     lineHeight: 1,
     marginBottom: theme.spacing.md,
-    fontFamily: 'Mukta, san-serif',
+    fontFamily: 'Sen, san-serif',
   },
 
   controls: {
