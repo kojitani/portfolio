@@ -32,6 +32,13 @@ body {
   height: calc(100svh - 120px);
   background-color: white;
   overflow-y: overlay;
+  overflow-x: hidden;
+}
+.contact-container {
+  background-image: url('/public/wave.svg');
+  background-position: left 0 bottom 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .burger-active-overlay {
   position: absolute;
@@ -82,6 +89,21 @@ body {
   top: 0;
   z-index: -1;
 }
+.project-img-zoom {
+  z-index: 5;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.mantine-asm909:hover .tabler-icon-brand-github {
+  color: black;
+}
+.mantine-asm909:hover .tabler-icon-brand-linkedin {
+  color: #0077b5;
+}
+
 @media screen and (max-width: 900px) {
   .container {
     margin: 0;
@@ -92,5 +114,15 @@ body {
   .contact-side-container,
   .contact-main-container {
     width: 100%;
+  }
+
+  .contact-container {
+    background-image: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .project-img-zoom {
+    top: 0.5rem;
+    right: 0.5rem;
   }
 }

@@ -17,6 +17,9 @@ const useStyles = createStyles(theme => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: '100%',
+    maxWidth: '1440px',
+    margin: '0 auto',
+    padding: '0 2rem',
     [theme.fn.smallerThan('xs')]: {
       justifyContent: 'center',
     },
@@ -39,7 +42,7 @@ export default function Footer() {
         zIndex: '1',
       }}
     >
-      <div className={`${classes.footer} container`}>
+      <div className={classes.footer}>
         <Container fluid className={classes.inner}>
           <Text inherit color="dark.3" fz="sm">
             Copyright © 2023 Koji Taniguchi

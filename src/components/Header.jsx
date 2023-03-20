@@ -142,10 +142,15 @@ export default function HeaderNav() {
   }, [opened]);
 
   return (
-    <div>
+    <>
       {opened && <div className="burger-active-overlay"></div>}
+
       <Header height={HEADER_HEIGHT} className={classes.root}>
-        <Container fluid className={`${classes.header} container`}>
+        <Container
+          style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 2rem' }}
+          fluid
+          className={`${classes.header} `}
+        >
           <Link
             to="/"
             onClick={() => {
@@ -193,6 +198,6 @@ export default function HeaderNav() {
           </Transition>
         </Container>
       </Header>
-    </div>
+    </>
   );
 }

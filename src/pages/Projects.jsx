@@ -6,6 +6,10 @@ import {
   IconBrandJavascript,
   IconBrandReact,
   IconExternalLink,
+  IconZoomIn,
+  IconZoomOut,
+  IconArrowsMinimize,
+  IconArrowsMaximize,
 } from '@tabler/icons-react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
@@ -22,7 +26,6 @@ const useStyles = createStyles(theme => ({
     border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]
     }`,
-
     [theme.fn.smallerThan('900')]: {
       flexDirection: 'column-reverse',
       padding: theme.spacing.xl,
@@ -48,7 +51,7 @@ const useStyles = createStyles(theme => ({
 
   title: {
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontFamily: `Tilt Neon, ${theme.fontFamily}`,
     lineHeight: 1,
     marginBottom: theme.spacing.md,
   },
@@ -82,17 +85,27 @@ export default function Projects() {
     },
     {
       title: 'MinimaList',
-      body: 'MinimaList is a chrome extension that replaces the new tab page with a beautiful minimal Todo list experience to help keep track of your tasks and increase your productivity.',
+      body: 'MinimaList is a chrome extension that replaces the new tab page with a beautiful minimal Todo list experience to help keep track of your tasks and increase your productivity. MinimaList allows users to toggle recurring tasks, edit current tasks and customize the background to their own liking.',
       source: 'https://github.com/kojitani/MinimaList',
       demo: 'https://chrome.google.com/webstore/detail/minimalist-minimal-new-ta/nneeoeklioiioldpmlbllnffdffagaim?hl=en&authuser=0',
     },
   ];
   const projectElements = projectData.map((project, i) => {
     return (
-      <div className={classes.wrapper} key={i}>
+      <motion.div
+        initial={{ transform: ' translateX(200%)' }}
+        animate={{ transform: ' translateX(0%)' }}
+        transition={{
+          ease: [1, -0.09, 0.17, 1.1],
+          duration: (i + 1) * 1,
+        }}
+        exit={{ opacity: 1 }}
+        className={classes.wrapper}
+        key={i}
+      >
         <div className={classes.body}>
           <Title className={classes.title}>{project.title}</Title>
-          <Text fw={500} fz="lg" mb={5}>
+          <Text inherit fw={500} fz="lg" mb={5}>
             {project.body}
           </Text>
           <div className={classes.controls}>
@@ -138,15 +151,21 @@ export default function Projects() {
           </div>
         </div>
         <div className={classes.image}>
-          <Zoom>
+          <IconArrowsMaximize
+            alt="Zoom in project image"
+            className="project-img-zoom"
+            onClick={() => document.querySelector(`#project-img-${i}`).click()}
+          />
+          <Zoom IconZoom={IconArrowsMaximize} IconUnzoom={IconArrowsMinimize}>
             <img
               style={{ width: '100%', objectFit: 'cover', height: 'auto' }}
               src={`/images/${project.title}.jpg`}
               alt={`${project.title} preview image`}
+              id={`project-img-${i}`}
             ></img>
           </Zoom>
         </div>
-      </div>
+      </motion.div>
     );
   });
   return (

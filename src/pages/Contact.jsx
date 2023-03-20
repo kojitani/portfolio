@@ -8,11 +8,7 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { Link } from 'react-router-dom';
-import {
-  IconBrandGit,
-  IconBrandGithub,
-  IconBrandLinkedin,
-} from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import { useState } from 'react';
 import { notifications } from '@mantine/notifications';
 import { IconCheck } from '@tabler/icons-react';
@@ -47,7 +43,7 @@ export default function Contact() {
             sx={{ fontFamily: 'Tilt Neon, sans-serif' }}
             fz="lg"
           >
-            You can find me on{' '}
+            You can find my code on{' '}
             <Text
               span
               variant="gradient"
@@ -123,7 +119,7 @@ export default function Contact() {
             color: 'teal',
             icon: <IconCheck size="1rem" />,
           });
-        }, 500);
+        }, 1000);
       })
       .catch(error => alert(error));
   }
@@ -132,81 +128,86 @@ export default function Contact() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 1 }}
-      className="contact-container container"
+      className="contact-container "
     >
-      <div className="form-container">
-        <h1>Contact me</h1>
-        <div className="form-seperator-container">
-          <div className="contact-side-container">
-            <Text inherit fz="xl" color="dark.4" fw={600}>
-              If you have a question or just want to say hi, I’ll get back to
-              you as soon as I can! You can find me on social media, or please
-              fill in the form to contact me.
-            </Text>
+      <div className="container">
+        <div className="form-container">
+          <h1>Contact me</h1>
+          <div className="form-seperator-container">
+            <div className="contact-side-container">
+              <Text inherit fz="xl" color="dark.4" fw={600}>
+                If you have a question or just want to say hi, I’ll get back to
+                you as soon as I can! You can find me on social media, or please
+                fill in the form to contact me.
+              </Text>
 
-            {icons}
-          </div>
-          <div className="contact-main-container">
-            <form
-              name="contact"
-              onSubmit={form.onSubmit(event => {
-                handleSubmit(event);
-              })}
-            >
-              <input type="hidden" name="form-name" value="contact" />
+              {icons}
+            </div>
+            <div className="contact-main-container">
+              <form
+                name="contact"
+                onSubmit={form.onSubmit(event => {
+                  handleSubmit(event);
+                })}
+              >
+                <input type="hidden" name="form-name" value="contact" />
 
-              <SimpleGrid cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
-                <TextInput
-                  label="Name"
-                  placeholder="Your name"
-                  name="name"
-                  variant="filled"
-                  size="lg"
-                  {...form.getInputProps('name')}
-                />
-                <TextInput
-                  label="Email"
-                  placeholder="Your email"
-                  name="email"
-                  variant="filled"
-                  size="lg"
-                  {...form.getInputProps('email')}
-                />
-              </SimpleGrid>
-
-              <TextInput
-                label="Subject"
-                placeholder="Subject"
-                mt="md"
-                name="subject"
-                variant="filled"
-                size="lg"
-                {...form.getInputProps('subject')}
-              />
-              <Textarea
-                mt="md"
-                label="Message"
-                placeholder="Your message"
-                maxRows={10}
-                minRows={5}
-                autosize
-                name="message"
-                variant="filled"
-                size="lg"
-                {...form.getInputProps('message')}
-              />
-
-              <Group position="right" mt="xl">
-                <Button
-                  loading={sentForm}
-                  variant="light"
-                  type="submit"
-                  size="md"
+                <SimpleGrid
+                  cols={2}
+                  breakpoints={[{ maxWidth: 'sm', cols: 1 }]}
                 >
-                  Send message
-                </Button>
-              </Group>
-            </form>
+                  <TextInput
+                    label="Name"
+                    placeholder="Your name"
+                    name="name"
+                    variant="filled"
+                    size="lg"
+                    {...form.getInputProps('name')}
+                  />
+                  <TextInput
+                    label="Email"
+                    placeholder="Your email"
+                    name="email"
+                    variant="filled"
+                    size="lg"
+                    {...form.getInputProps('email')}
+                  />
+                </SimpleGrid>
+
+                <TextInput
+                  label="Subject"
+                  placeholder="Subject"
+                  mt="md"
+                  name="subject"
+                  variant="filled"
+                  size="lg"
+                  {...form.getInputProps('subject')}
+                />
+                <Textarea
+                  mt="md"
+                  label="Message"
+                  placeholder="Your message"
+                  maxRows={10}
+                  minRows={5}
+                  autosize
+                  name="message"
+                  variant="filled"
+                  size="lg"
+                  {...form.getInputProps('message')}
+                />
+
+                <Group position="right" mt="xl">
+                  <Button
+                    loading={sentForm}
+                    variant="light"
+                    type="submit"
+                    size="md"
+                  >
+                    {sentForm ? 'Sending message...' : 'Send message'}
+                  </Button>
+                </Group>
+              </form>
+            </div>
           </div>
         </div>
       </div>
