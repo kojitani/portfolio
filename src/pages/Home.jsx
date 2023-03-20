@@ -19,8 +19,8 @@ export default function Home() {
           inherit
           style={{ maxWidth: '540px', margin: '2rem 0' }}
         >
-          Self-taught developer, passionate about creating functional websites.
-          I have most experience with{' '}
+          Self-taught developer, passionate about creating functional and
+          responsive websites. I have most experience with{' '}
           <Text
             span
             variant="gradient"

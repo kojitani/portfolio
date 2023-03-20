@@ -20,6 +20,8 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 2rem;
+  display: block;
+  width: 100%;
 }
 .home-container {
   background-image: url('/wave-home.svg');
@@ -133,7 +135,6 @@ body {
   animation: animate 15s ease infinite;
 }
 .home-welcome {
-  width: 1440px;
   font-family: 'Space Mono', sans-serif;
   font-size: clamp(16px, 2vw, 24px);
   margin-bottom: 1rem;
