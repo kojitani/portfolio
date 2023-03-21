@@ -95,8 +95,7 @@ const useStyles = createStyles(theme => ({
   },
 }));
 
-export default function HeaderNav() {
-  const location = useLocation();
+export default function HeaderNav(props) {
   const links = [
     {
       link: 'about',
@@ -113,9 +112,12 @@ export default function HeaderNav() {
     },
   ];
   const [opened, { toggle, close }] = useDisclosure(false);
-  const [active, setActive] = useState(location.pathname.slice(1));
+  const [active, setActive] = useState(props.location.pathname.slice(1));
   const { classes, cx } = useStyles();
 
+  useEffect(() => {
+    setActive(props.location.pathname.slice(1));
+  }, [props.location.pathname]);
   const items = links.map(link => (
     <Link
       key={link.label}

@@ -25,7 +25,7 @@ export default function Layout() {
 
   return (
     <div>
-      <Header />
+      <Header location={location} />
       <AnimatePresence>
         <Outlet context={location} />
       </AnimatePresence>

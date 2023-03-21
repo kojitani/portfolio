@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Title, Text, Button } from '@mantine/core';
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <div className="home-container ">
       <div className="container">
@@ -71,11 +73,10 @@ export default function Home() {
           .
         </Text>
         <Button
-          component="a"
           size="lg"
-          href="/about"
           color="dark.9"
           variant="outline"
+          onClick={() => navigate('/about')}
         >
           More about me
         </Button>

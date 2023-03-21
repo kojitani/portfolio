@@ -1,9 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Text } from '@mantine/core';
 import { motion } from 'framer-motion';
 export default function About() {
   const date = new Date();
-
+  const navigate = useNavigate();
   let greetings;
   if (date.getHours() >= 5 && date.getHours() < 12) {
     greetings = 'Good Morning!';
@@ -87,10 +88,13 @@ export default function About() {
               worked on a few projects that I'm proud of. One of my recent
               projects,{' '}
               <Text
-                style={{ textDecoration: 'underline' }}
+                style={{
+                  textDecoration: 'underline',
+                  cursor: 'pointer',
+                  display: 'inline-block',
+                }}
                 inherit
-                component="a"
-                href="/projects"
+                onClick={() => navigate('/projects')}
               >
                 VanVenture
               </Text>
@@ -105,10 +109,13 @@ export default function About() {
               opportunities to learn and collaborate with other developers, so
               if you're interested in working together, feel free to{' '}
               <Text
+                style={{
+                  textDecoration: 'underline',
+                  cursor: 'pointer',
+                  display: 'inline-block',
+                }}
                 inherit
-                component="a"
-                href="/contact"
-                style={{ textDecoration: 'underline' }}
+                onClick={() => navigate('/contact')}
               >
                 contact me.
               </Text>
