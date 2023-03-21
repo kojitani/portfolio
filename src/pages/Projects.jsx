@@ -172,7 +172,7 @@ export default function Projects() {
           <Zoom IconZoom={IconArrowsMaximize} IconUnzoom={IconArrowsMinimize}>
             <img
               style={{ width: '100%', objectFit: 'cover', height: 'auto' }}
-              src={`/images/${project.title}.jpg`}
+              src={`/images/${project.title}.webp`}
               alt={`${project.title} preview image`}
               id={`project-img-${i}`}
             ></img>
