@@ -130,7 +130,7 @@ body {
   color: #000000;
   -webkit-text-stroke: 0 #fff;
   overflow: hidden;
-  animation: animate 15s ease infinite;
+  animation: animate 1.5s ease 0.5s forwards;
 }
 .home-welcome {
   font-family: 'Space Mono', sans-serif;
@@ -157,13 +157,7 @@ body {
   height: 24px;
 }
 @keyframes animate {
-  0%,
-  5%,
   100% {
-    width: 0;
-  }
-  10%,
-  90% {
     width: 100%;
   }
 }
