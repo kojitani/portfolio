@@ -124,13 +124,18 @@ export default function Contact() {
       .catch(error => alert(error));
   }
   return (
-    <motion.div className="contact-container ">
+    <div className="contact-container ">
       <div className="container">
         <div className="form-container">
           <h1 data-text="Contact me" id="contact-title">
             Contact me
           </h1>
-          <div className="form-seperator-container">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="form-seperator-container"
+          >
             <div className="contact-side-container">
               <Text inherit fz="xl" color="dark.9">
                 If you have a question or just want to say hi, I’ll get back to
@@ -205,9 +210,9 @@ export default function Contact() {
                 </Group>
               </form>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

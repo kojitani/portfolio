@@ -16,12 +16,15 @@ export default function About() {
 
   return (
     <>
-      <motion.div className="about-container ">
+      <div className="about-container ">
         <div className="container">
           <h1 id="about-title" data-text={greetings}>
             {greetings}
           </h1>
-          <div
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -120,9 +123,9 @@ export default function About() {
                 contact me.
               </Text>
             </Text>{' '}
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 }
