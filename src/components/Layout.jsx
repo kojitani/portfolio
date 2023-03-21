@@ -12,9 +12,9 @@ export default function Layout() {
     '/wave-projects.svg',
   ];
   const projectImages = [
-    '/images/BrainDump.jpg',
-    '/images/MinimaList.jpg',
-    '/images/VanVenture.jpg',
+    '/images/BrainDump.webp',
+    '/images/MinimaList.webp',
+    '/images/VanVenture.webp',
   ];
   const backgroundElements = waveBackgrounds.map((background, i) => {
     return <img key={i} src={background} style={{ display: 'none' }}></img>;
