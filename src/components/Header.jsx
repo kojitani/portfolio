@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import {
   createStyles,
   Header,
@@ -10,6 +11,7 @@ import {
   rem,
   Avatar,
   Text,
+  Skeleton,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Link, useLocation } from 'react-router-dom';
@@ -113,6 +115,7 @@ export default function HeaderNav(props) {
   ];
   const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(props.location.pathname.slice(1));
+  const [avatarLoading, setAvatarLoading] = useState(true);
   const { classes, cx } = useStyles();
 
   useEffect(() => {
@@ -167,12 +170,15 @@ export default function HeaderNav(props) {
               gap: '0.5rem',
             }}
           >
-            {/* <Avatar
-              size="md"
-              radius="xl"
-              src="/avatar.webp"
-              alt="Koji Taniguchi Profile Picture"
-            /> */}
+            <Skeleton height={38} width={38} circle visible={avatarLoading}>
+              <Avatar
+                size="md"
+                onLoad={() => setAvatarLoading(false)}
+                radius="xl"
+                src="/avatar.webp"
+                alt="Koji Taniguchi Profile Picture"
+              />
+            </Skeleton>
             <Text sx={{ fontFamily: 'Tilt Neon, sans-serif' }} fz="lg">
               Koji Taniguchi
             </Text>
