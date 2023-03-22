@@ -65,7 +65,7 @@ export default function Footer() {
                 variant="transparent"
                 size="lg"
                 component="a"
-                name="Github link"
+                aria-label="Github"
                 href="https://github.com/kojitani"
                 target="_blank"
               >
@@ -81,7 +81,7 @@ export default function Footer() {
                 variant="transparent"
                 size="lg"
                 component="a"
-                name="LinkedIn link"
+                aria-label="LinkedIn"
                 href="https://www.linkedin.com/in/koji-taniguchi96/"
                 target="_blank"
               >
