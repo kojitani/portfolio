@@ -167,12 +167,12 @@ export default function HeaderNav(props) {
               gap: '0.5rem',
             }}
           >
-            <Avatar
+            {/* <Avatar
               size="md"
               radius="xl"
               src="/avatar.webp"
               alt="Koji Taniguchi Profile Picture"
-            />
+            /> */}
             <Text sx={{ fontFamily: 'Tilt Neon, sans-serif' }} fz="lg">
               Koji Taniguchi
             </Text>
