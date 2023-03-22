@@ -73,13 +73,13 @@ export default function Projects() {
   const projectData = [
     {
       title: 'VanVenture',
-      body: 'VanVenture is a camper van rental website, which allows users to  rent a camper van or rent out their unused RV to earn passive income. This website also has a dedicated dashboard that allows hosts to login and monitor their van listings.',
+      body: 'VanVenture is a camper van rental website, which allows users to  rent a camper van or rent out their unused RV to earn passive income. VanVenture provides a rental booking system with an availability calendar and pricing calculator, enabling users to easily reserve and pay for their rental online. This website also has a dedicated dashboard for hosts that provides a detailed overview of their van listings.',
       source: 'https://github.com/kojitani/vanventure',
       demo: 'https://vanventure.netlify.app',
     },
     {
       title: 'BrainDump',
-      body: 'BrainDump is a chrome extension that allows users to quickly and easily save notes, memos, and ideas directly from their browser. With this extension, users can capture their thoughts and ideas as they come, without having to switch to a separate note-taking app or program.      ',
+      body: 'BrainDump is a chrome extension enables users to save notes and ideas directly from their browser. BrainDump provides various features such as the ability to sort notes by last modification date or creation date, giving users flexibility in how they organize their notes, and search functionality to allow users to quickly find specific notes, improving the user experience and productivity. ',
       source: 'https://github.com/kojitani/BrainDump',
       demo: 'https://chrome.google.com/webstore/detail/braindump-notes-anywhere/bdocpglgpbkkkjlkgjebjgolehkimejb',
     },

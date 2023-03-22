@@ -107,7 +107,7 @@ export default function About() {
               van listings.
             </Text>
             <Text inherit fz="xl">
-              In my free time, I enjoy consuming fantasy and horror genre TV
+              In my free time, I enjoy consuming fantasy and horror TV
               shows/movies and playing video games. I'm always looking for new
               opportunities to learn and collaborate with other developers, so
               if you're interested in working together, feel free to{' '}
