@@ -89,6 +89,7 @@ export default function Home() {
             color="dark.9"
             variant="outline"
             onClick={() => navigate('/about')}
+            title="Go to about section"
           >
             More about me
           </Button>

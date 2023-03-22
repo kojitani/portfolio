@@ -27,7 +27,7 @@ export default function Contact() {
         marginBottom: '-0.5rem',
       }}
     >
-      <Icon size="2rem" stroke={1.5} />
+      <Icon size="2rem" stroke={1.5} alt={'icon'} />
       <Link
         to={
           Icon === IconBrandGithub
@@ -201,7 +201,7 @@ export default function Contact() {
                 <Group position="right" mt="xl">
                   <Button
                     loading={sentForm}
-                    variant="light"
+                    variant="default"
                     type="submit"
                     size="md"
                   >

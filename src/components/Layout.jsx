@@ -17,10 +17,24 @@ export default function Layout() {
     '/images/VanVenture.webp',
   ];
   const backgroundElements = waveBackgrounds.map((background, i) => {
-    return <img key={i} src={background} style={{ display: 'none' }}></img>;
+    return (
+      <img
+        alt={'no display image'}
+        key={i}
+        src={background}
+        style={{ display: 'none' }}
+      ></img>
+    );
   });
   const projectImgElements = projectImages.map((img, i) => {
-    return <img key={i} src={img} style={{ display: 'none' }}></img>;
+    return (
+      <img
+        alt={'no display image'}
+        key={i}
+        src={img}
+        style={{ display: 'none' }}
+      ></img>
+    );
   });
 
   return (
