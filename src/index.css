@@ -23,7 +23,7 @@ body {
   display: block;
   width: 100%;
 }
-.home-container {
+/* .home-container {
   background-image: url('/wave-home.svg');
 }
 .projects-container {
@@ -34,7 +34,7 @@ body {
 }
 .contact-container {
   background-image: url('/wave-contact.svg');
-}
+} */
 .home-container,
 .about-container,
 .projects-container,

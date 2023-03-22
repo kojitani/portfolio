@@ -11,17 +11,17 @@ export default function Layout() {
     '/wave-home.svg',
     '/wave-projects.svg',
   ];
-  const projectImages = [
-    '/images/BrainDump.webp',
-    '/images/MinimaList.webp',
-    '/images/VanVenture.webp',
-  ];
+  // const projectImages = [
+  //   '/images/BrainDump.webp',
+  //   '/images/MinimaList.webp',
+  //   '/images/VanVenture.webp',
+  // ];
   const backgroundElements = waveBackgrounds.map((background, i) => {
     return <img key={i} src={background} style={{ display: 'none' }}></img>;
   });
-  const projectImgElements = projectImages.map((img, i) => {
-    return <img key={i} src={img} style={{ display: 'none' }}></img>;
-  });
+  // const projectImgElements = projectImages.map((img, i) => {
+  //   return <img key={i} src={img} style={{ display: 'none' }}></img>;
+  // });
 
   return (
     <div>
@@ -31,7 +31,7 @@ export default function Layout() {
       </AnimatePresence>
       <Footer />
       {backgroundElements}
-      {projectImgElements}
+      {/* {projectImgElements} */}
     </div>
   );
 }
