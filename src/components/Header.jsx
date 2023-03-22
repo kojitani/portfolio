@@ -170,7 +170,7 @@ export default function HeaderNav(props) {
             <Avatar
               size="md"
               radius="xl"
-              src="https://media.licdn.com/dms/image/C4D03AQH9aDGjiwk6nw/profile-displayphoto-shrink_800_800/0/1610674419691?e=1684368000&v=beta&t=zMWxwtspMrl2qe-bZCKiPfzk1Rsj7vW3kjetEaPd4PY"
+              src="/avatar.webp"
               alt="Koji Taniguchi Profile Picture"
             />
             <Text sx={{ fontFamily: 'Tilt Neon, sans-serif' }} fz="lg">
